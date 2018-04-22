@@ -78,8 +78,8 @@ module.exports = class extends Generator {
       uleq: '='.repeat(this.props.projectName.length),
       uldash: '-'.repeat(this.props.projectName.length),
       pyIfLicense: this.props.license === 'None' ? '# ' : '',
-      taskName: this.props.projectName.replace(/-([a-z])/g, function(g) {
-        return g[1].toUpperCase();
+      taskName: this.props.projectName.replace(/(?:^|[-_])([a-z])/g, function(g) {
+        return g.length > 1 ? g[1].toUpperCase() : g.toUpperCase();
       })
     };
     // Create the files at the root of the project.

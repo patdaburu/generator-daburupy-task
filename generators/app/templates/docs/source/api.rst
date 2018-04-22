@@ -26,7 +26,7 @@ API Documentation
 <%= projectName %>.tasks
 <%= uldash %>------
 .. automodule:: <%= projectName %>.cli
-:members:
+      :members:
       :undoc-members:
       :show-inheritance:
 

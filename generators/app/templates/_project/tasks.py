@@ -9,9 +9,9 @@
 This module contains the project's tasks.
 """
 import os
+from typing import cast
 import luigi
 from luijo.config import FileSystem
-from typing import cast
 
 
 class <%= taskName %>(luigi.Task):
@@ -51,7 +51,6 @@ class <%= taskName %>(luigi.Task):
         """
         Run the task.
         """
-        with self.output().open('w') as f:
+        with self.output().open('w') as fout:
             for rpt in range(1, cast(int, self.repeat)+1):
-                f.write(f'{rpt}: Hello {self.hello}.\n')
-
+                fout.write(f'{rpt}: Hello {self.hello}.\n')

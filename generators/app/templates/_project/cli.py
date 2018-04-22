@@ -18,11 +18,11 @@ can be used as a handy facility for running the task from a command line.
     `Read-The-Docs <http://luigi.readthedocs.io/en/stable/>`_ page.
 """
 import multiprocessing
+from typing import Iterable
 import click
 import luigi
 from luijo.config import find_configs
 from .tasks import <%= taskName %>
-from typing import Iterable
 
 
 class Info(object):
