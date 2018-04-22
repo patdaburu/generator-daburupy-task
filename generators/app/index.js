@@ -125,11 +125,15 @@ module.exports = class extends Generator {
       }.bind(this)
     );
     // Copy the unit test files.
-    ['test_example.py'].forEach(
+    ['test_example.py', 'test_tasks.py'].forEach(
       function(f) {
         const src = path.join('tests', f);
         const dest = path.join('tests', f);
-        this.fs.copyTpl(this.templatePath(src), this.destinationPath(dest), this.props);
+        this.fs.copyTpl(
+          this.templatePath(src),
+          this.destinationPath(dest),
+          Object.assign({}, this.props, otherProps)
+        );
       }.bind(this)
     );
     // Copy the root doc files.

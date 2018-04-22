@@ -1,6 +1,6 @@
 {
   "name": "generator-daburupy-task",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "description": "This is a generator for a basic python Luigi task project.",
   "homepage": "https://github.com/patdaburu/generator-daburupy-click",
   "author": {
@@ -15,7 +15,8 @@
   "keywords": [
     "python",
     "sphinx",
-    "yeoman-generator"
+    "yeoman-generator",
+    "luigi"
   ],
   "devDependencies": {
     "coveralls": "^2.13.1",

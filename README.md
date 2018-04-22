@@ -1,5 +1,7 @@
 # generator-daburupy-click
-`daburupy-click` a [Yeoman](http://yeoman.io) generator for a basic python command-line project using [Click](http://click.pocoo.org/5/) that includes pytest, [Sphinx](http://www.sphinx-doc.org/en/master/), a `Makefile` and a few other standard pieces to get your project going.
+`daburupy-task` a [Yeoman](http://yeoman.io) generator for a basic python [Luigi](https://luigi.readthedocs.io/en/stable/) task project that includes pytest, [Sphinx](http://www.sphinx-doc.org/en/master/), a `Makefile` and a few other standard pieces to get your project going.
+
+It also includes a using [Click](http://click.pocoo.org/5/) application you can use to run your task if you need to do so.
 
 If you haven't used yeoman templates before, take a look at the [Getting Started with Yeoman](http://yeoman.io/learning/) article on the project page.
 
@@ -48,10 +50,10 @@ If you haven't already installed  [Bower](https://bower.io/), perform the follow
 npm install -g bower
 ```
 
-## Install the `daburupy-click` Generator
+## Install the `daburupy-task` Generator
 
 ```bash
-npm install -g generator-daburupy-click
+npm install -g generator-daburupy-task
 ```
 
 ## Create Your Project
@@ -60,10 +62,26 @@ From a command prompt go into the directory in which you'd love to start your ne
 
 ```bash
 cd /my/target/directory
-yo daburupy-click
+yo daburupy-task
 ```
 
 The generator will ask you a few questions and, based on your answers, generate your new project.
+
+## Project Files
+
+The new project will contain a couple of files that we describe briefly in this section.
+
+### cli.py
+
+This is a  [Click](http://click.pocoo.org/5/) command-line application you can use to run your task, or submit it to a running instance of [the Luigi daemon](http://luigi.readthedocs.io/en/stable/central_scheduler.html?highlight=luigid), also known as `luigid`.  You can also modify it as your project develops.
+
+### tasks.py
+
+This is the module that contains the task that was created when you generated the project.
+
+### luigi.cfg
+
+This is a sample [Lugi configuration file](http://luigi.readthedocs.io/en/stable/configuration.html) that you can ship with your library.
 
 ## Next Steps
 
