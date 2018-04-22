@@ -1,6 +1,6 @@
 {
   "name": "generator-daburupy-task",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "This is a generator for a basic python Luigi task project.",
   "homepage": "https://github.com/patdaburu/generator-daburupy-click",
   "author": {

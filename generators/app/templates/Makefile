@@ -6,6 +6,12 @@ PY_VERSION = <%= pythonVersion %>
 build:
 	pip install --editable .
 
+run:
+	$(PROJ_NAME) run
+
+submit:
+	$(PROJ_NAME) submit
+
 freeze:
 	pip freeze > requirements.txt
 

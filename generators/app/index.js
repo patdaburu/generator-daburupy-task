@@ -85,6 +85,7 @@ module.exports = class extends Generator {
     // Create the files at the root of the project.
     [
       'Makefile',
+      'MANIFEST.in',
       'requirements.txt',
       'README',
       'README.md',
