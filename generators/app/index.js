@@ -113,7 +113,7 @@ module.exports = class extends Generator {
       }.bind(this)
     );
     // Copy the project directory templates.
-    ['__init__.py', 'cli.py', 'tasks.py'].forEach(
+    ['__init__.py', 'cli.py', 'tasks.py', 'luigi.cfg'].forEach(
       function(f) {
         const src = path.join('_project', f);
         const dest = path.join(this.props.projectName, f);
